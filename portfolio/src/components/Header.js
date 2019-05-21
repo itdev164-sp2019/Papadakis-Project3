@@ -8,15 +8,22 @@ const Container = styled.div`
   text-align: center;
   display: flex;
   flex-wrap: nowrap;
-
   flex-direction: column;
+`;
+
+const H1 = styled.h1`
+  text-transform: uppercase;
+  font-size: 150%;
+  text-decoration: none;
 `;
 
 const Child = styled.div``;
 
-const Header = () => (
+const Header = props => (
   <Container>
-    <h1>Header</h1>
+    <Link to='/'>
+      <H1>Header</H1>
+    </Link>
     <Child>
       <NavBar />
     </Child>
