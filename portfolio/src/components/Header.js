@@ -2,28 +2,34 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import styled from 'styled-components';
+import StyledLink from './StyledLink';
 
 const Container = styled.div`
-  height: 100px;
-  text-align: center;
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: column;
 `;
 
 const H1 = styled.h1`
   text-transform: uppercase;
-  font-size: 150%;
-  text-decoration: none;
+  color: ${props => props.theme.colors.primary.yellow};
+  font-family: ${props => props.theme.fonts.primary.font1}
+  text-align: left
+  margin-left: -10px;
+  font-size: ${props => props.theme.fontSize.primary.size1};
+  &:hover {
+      color: ${props => props.theme.colors.primary.creme}
+  }
 `;
 
-const Child = styled.div``;
+const Child = styled.div`
+  text-align: left;
+`;
 
 const Header = props => (
   <Container>
-    <Link to='/'>
-      <H1>Header</H1>
-    </Link>
+    <StyledLink link={'/'}>
+      <H1>{props.name}</H1>
+    </StyledLink>
     <Child>
       <NavBar />
     </Child>

@@ -1,28 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import StyledLink from './StyledLink';
 
 const Nav = styled.ul`
   display: flex;
   flex-direction: row;
   list-style: none;
-  text-decoration: none;
+
   justify-content: flex-start;
 `;
 
 const Item = styled.li`
   text-decoration: none;
-  padding-left: 2rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  font-family: ${props => props.theme.fonts.primary.font1};
+  text-transform: uppercase;
+  color: ${props => props.theme.colors.primary.creme};
+  font-size: ${props => props.theme.fontSize.primary.size2};
+  border: 1px solid black;
+  &:hover {
+    background-color: ${props => props.theme.colors.primary.creme};
+    color: ${props => props.theme.colors.primary.yellow};
+  }
 `;
 
-const NavBar = () => (
+const NavBar = props => (
   <Nav>
-    <Item>
-      <Link to='/About'>About</Link>
-    </Item>
-    <Item>
-      <Link to='/About'>Other</Link>
-    </Item>
+    <StyledLink link='/About'>
+      <Item>About</Item>
+    </StyledLink>
+    <StyledLink link='/About'>
+      <Item>Projects</Item>
+    </StyledLink>
+    <StyledLink link='/Socials'>
+      <Item>Social</Item>
+    </StyledLink>
   </Nav>
 );
 

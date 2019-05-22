@@ -3,18 +3,21 @@ import React from 'react';
 const theme = {
   colors: {
     primary: {
-      red: '#f11a29',
+      yellow: '#fcb30a',
       creme: '#FFFCD6',
       darkCreme: '#fffca6'
     }
   },
   fonts: {
     primary: {
-      font1: 'Delius Swash Caps',
-      font2: 'Unkempt',
-      font3: 'Atma',
-      font4: 'Life Savers',
-      font5: 'Cherry Cream Soda'
+      font1: 'Shrikhand',
+      font2: 'Open Sans'
+    }
+  },
+  fontSize: {
+    primary: {
+      size1: 'calc(3vw + 3vh + 3vmin)',
+      size2: 'calc(1vw + 1vh + 1vmin)'
     }
   }
 };
