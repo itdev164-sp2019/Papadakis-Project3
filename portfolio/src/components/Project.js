@@ -7,6 +7,7 @@ const Container = styled.div`
   margin: 0 auto;
   margin-bottom: 10px;
   background-color: ${props => props.theme.colors.primary.yellow};
+  z-index: 2;
 `;
 const Link = styled.a`
   text-decoration: none;
