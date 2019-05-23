@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+  background-color: #01839b;
+  z-index: 3;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
