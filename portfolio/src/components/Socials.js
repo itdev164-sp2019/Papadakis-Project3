@@ -1,11 +1,22 @@
 import React from 'react';
 import Social from './Social';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  z-index: 2;
+`;
 
 const Socials = props => (
-  <div>
-    <Social sLink={props.socialLink[0]} name={props.name[0]} />
-    <Social sLink={props.socialLink[1]} name={props.name[1]} />
-  </div>
+  <Container>
+    <Social
+      sLink={props.socials.linkedin.link}
+      name={props.socials.linkedin.name}
+    />
+    <Social
+      sLink={props.socials.twitter.link}
+      name={props.socials.twitter.name}
+    />
+  </Container>
 );
 
 export default Socials;

@@ -11,13 +11,13 @@ const Container = styled.div`
 
 const H1 = styled.h1`
   text-transform: uppercase;
-  color: ${props => props.theme.colors.primary.yellow};
+  color: ${props => props.theme.colors.primary.creme};
   font-family: ${props => props.theme.fonts.primary.font1}
   text-align: left
   margin-left: -10px;
   font-size: ${props => props.theme.fontSize.primary.size1};
   &:hover {
-      color: ${props => props.theme.colors.primary.creme}
+      color: ${props => props.theme.colors.primary.yellow}
   }
 `;
 

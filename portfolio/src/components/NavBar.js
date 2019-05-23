@@ -7,7 +7,7 @@ const Nav = styled.ul`
   display: flex;
   flex-direction: row;
   list-style: none;
-
+  z-index: 3;
   justify-content: flex-start;
 `;
 
@@ -20,6 +20,7 @@ const Item = styled.li`
   color: ${props => props.theme.colors.primary.creme};
   font-size: ${props => props.theme.fontSize.primary.size2};
   border: 1px solid black;
+
   &:hover {
     background-color: ${props => props.theme.colors.primary.creme};
     color: ${props => props.theme.colors.primary.yellow};
@@ -31,7 +32,7 @@ const NavBar = props => (
     <StyledLink link='/About'>
       <Item>About</Item>
     </StyledLink>
-    <StyledLink link='/About'>
+    <StyledLink link='/Projects'>
       <Item>Projects</Item>
     </StyledLink>
     <StyledLink link='/Socials'>

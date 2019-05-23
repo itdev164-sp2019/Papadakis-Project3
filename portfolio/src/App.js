@@ -6,6 +6,8 @@ import { Theme as theme } from './components/theme/Theme';
 import About from './components/About';
 import Header from './components/Header';
 import Socials from './components/Socials';
+import Stripe from './components/Stripe';
+import Projects from './components/Projects';
 import './App.css';
 
 class App extends Component {
@@ -15,11 +17,29 @@ class App extends Component {
     this.state = {
       header: `The 'folio`,
       name: 'Nicholas Papadakis-Schneider',
-      socialNames: ['LinkedIn', 'Twitter'],
-      socialLinks: [
-        'https://www.linkedin.com/in/nicholas-papadakis-schneider-04040215a/',
-        'https://twitter.com/nickpapadakis33'
-      ]
+      socials: {
+        linkedin: {
+          name: 'LinkedIn',
+          link:
+            'https://www.linkedin.com/in/nicholas-papadakis-schneider-04040215a/'
+        },
+        twitter: {
+          name: 'Twitter',
+          link: 'https://twitter.com/nickpapadakis33'
+        }
+      },
+      projects: {
+        ci_design: {
+          name: 'CI-Design Inc. Website',
+          type: 'Front-End Website',
+          link: 'https://www.cidesigninc.com'
+        },
+        meme: {
+          name: 'Meme Generator',
+          type: 'Front-End Web App',
+          link: 'https://youthful-neumann-6562df.netlify.com/'
+        }
+      }
     };
   }
   render() {
@@ -28,18 +48,18 @@ class App extends Component {
         <ThemeProvider theme={theme}>
           <div className='App'>
             <Header name={this.state.header} />
+            <Stripe />
             <Route
               path='/About'
               render={() => <About name={this.state.name} />}
             />
             <Route
               path='/Socials'
-              render={() => (
-                <Socials
-                  name={this.state.socialNames}
-                  socialLink={this.state.socialLinks}
-                />
-              )}
+              render={() => <Socials socials={this.state.socials} />}
+            />
+            <Route
+              path='/Projects'
+              render={() => <Projects projects={this.state.projects} />}
             />
           </div>
         </ThemeProvider>

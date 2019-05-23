@@ -5,10 +5,12 @@ import StyledLink from './StyledLink';
 const Container = styled.div` 
     text-align: center;
     border: 1px solid: #fff;
+    z-index: 2;
     `;
 
 const Link = styled.a`
   text-decoration: none;
+  z-index: 2;
 `;
 
 const H3 = styled.div`
@@ -19,8 +21,9 @@ const H3 = styled.div`
     color: ${props => props.theme.colors.primary.creme};
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: ${props => props.theme.fontSize.primary.size3};
     text-decoration: none;
+    z-index: 2;
 `;
 
 const Social = props => (
