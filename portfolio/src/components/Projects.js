@@ -16,9 +16,19 @@ const Projects = props => (
       type={props.projects.ci_design.type}
     />
     <Project
+      sLink={props.projects.rsvp.link}
+      name={props.projects.rsvp.name}
+      type={props.projects.rsvp.type}
+    />
+    <Project
       sLink={props.projects.meme.link}
       name={props.projects.meme.name}
       type={props.projects.meme.type}
+    />
+    <Project
+      sLink={props.projects.photo.link}
+      name={props.projects.photo.name}
+      type={props.projects.photo.type}
     />
   </Container>
 );
