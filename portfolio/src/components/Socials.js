@@ -16,6 +16,10 @@ const Socials = props => (
       sLink={props.socials.twitter.link}
       name={props.socials.twitter.name}
     />
+    <Social
+      sLink={props.socials.medium.link}
+      name={props.socials.medium.name}
+    />
   </Container>
 );
 

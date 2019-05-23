@@ -26,18 +26,32 @@ class App extends Component {
         twitter: {
           name: 'Twitter',
           link: 'https://twitter.com/nickpapadakis33'
+        },
+        medium: {
+          name: 'Medium',
+          link: 'https://medium.com/@nickpapadakis33'
         }
       },
       projects: {
         ci_design: {
           name: 'CI-Design Inc. Website',
-          type: 'Front-End Website',
+          type: 'Front-End Website | Made with .NET - SCSS - Umbraco',
           link: 'https://www.cidesigninc.com'
+        },
+        rsvp: {
+          name: 'Rsvp App',
+          type: 'Full Stack Web App | Made with the MERN stack',
+          link: 'http://localhost:3000'
         },
         meme: {
           name: 'Meme Generator',
-          type: 'Front-End Web App',
+          type: 'Front-End Web App | Made with ReactJS',
           link: 'https://youthful-neumann-6562df.netlify.com/'
+        },
+        photo: {
+          name: 'The Photo App',
+          type: 'Front End Web App | Made with GatsbyJS',
+          link: 'https://vigilant-brahmagupta-0a705a.netlify.com/'
         }
       }
     };
