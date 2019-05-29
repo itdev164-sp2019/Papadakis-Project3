@@ -8,6 +8,7 @@ const Container = styled.div`
   margin-bottom: 10px;
   background-color: ${props => props.theme.colors.primary.yellow};
   z-index: 2;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 `;
 const Link = styled.a`
   text-decoration: none;
